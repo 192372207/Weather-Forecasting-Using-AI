@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "521559511421",
+    "project_id": "skysense-854da",
+    "storage_bucket": "skysense-854da.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521559511421:android:092703c12e757570713c14",
+        "android_client_info": {
+          "package_name": "com.skysense"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCusXqC9NKu0ItDUIyeluW4oasCIxyHIEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

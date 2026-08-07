@@ -1,0 +1,13 @@
+# Git ignore rules
+git_bin/
+node_modules/
+**/node_modules/
+__pycache__/
+**/__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+dist/
+backend/app/firebase_credentials.json
+**/firebase_credentials.json

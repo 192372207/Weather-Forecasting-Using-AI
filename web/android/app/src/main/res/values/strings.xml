@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SkySense AI</string>
+    <string name="title_activity_main">SkySense AI</string>
+    <string name="package_name">com.skysense</string>
+    <string name="custom_url_scheme">com.skysense</string>
+</resources>

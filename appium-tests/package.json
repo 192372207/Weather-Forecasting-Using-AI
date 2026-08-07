@@ -1,0 +1,21 @@
+{
+  "name": "skysense-appium-tests",
+  "version": "1.0.0",
+  "description": "Appium Mobile E2E Test Suite for SkySense AI (Android & iOS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.js --timeout 60000",
+    "test:appium": "mocha tests/app-e2e-tests.js --timeout 60000",
+    "generate-report": "python generate_appium_report.py"
+  },
+  "dependencies": {
+    "webdriverio": "^8.32.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0",
+    "chai": "^5.1.1",
+    "dotenv": "^16.4.5"
+  },
+  "author": "SkySense QA Team",
+  "license": "MIT"
+}
