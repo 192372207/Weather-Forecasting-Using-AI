@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+import os
 from app.config import settings
 from app.routers import auth, weather, ai, community, favorites, alerts, admin, safety
 
@@ -29,12 +31,26 @@ app.include_router(favorites.router, prefix=api_v1_prefix)
 app.include_router(alerts.router, prefix=api_v1_prefix)
 app.include_router(admin.router, prefix=api_v1_prefix)
 
+APK_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "SkySense_AI.apk"))
+
+@app.get("/download/apk", response_class=FileResponse)
+@app.get("/SkySense_AI.apk", response_class=FileResponse)
+async def download_apk():
+    if os.path.exists(APK_PATH):
+        return FileResponse(
+            path=APK_PATH,
+            filename="SkySense_AI.apk",
+            media_type="application/vnd.android.package-archive"
+        )
+    return {"error": "APK file not found"}
+
 @app.get("/")
 async def root():
     return {
         "status": "online",
         "app": settings.APP_NAME,
         "version": settings.VERSION,
+        "apk_download_url": "/download/apk",
         "documentation": "/docs"
     }
 
